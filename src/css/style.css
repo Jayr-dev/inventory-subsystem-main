@@ -1,0 +1,202 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 10px;
+}
+main{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+button{
+    cursor: pointer;
+}
+.logo{
+    margin-left: 50px;
+}
+.operation{
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 10px;
+    margin: 0 50px;
+}
+.btn-container{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 20px 0 0;
+   
+}
+.txt-items{
+    color: black;
+    text-align: center;
+}
+.add{
+    background-color:#007BFF;
+    color: white;
+}
+.add:hover{
+    background-color: #218dff;
+}
+.remove{
+    background-color: #ff0000 ;
+    color: white;
+}
+.remove:hover{
+    background-color: #ff4d4d;
+}
+.edit{
+    background-color: rgb(255, 80, 156) ;
+    color: white;
+}
+.edit:hover{
+    background-color: rgb(255, 113, 175);
+}
+.add, .remove, .edit{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+}
+
+form{
+    z-index: 1000;
+}
+
+.form{
+    width: 250px;
+    height: 250px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 10px 10px 10px;
+    background-color: rgb(124, 10, 189);
+    border-radius: 20px;
+}
+.close{
+    position: absolute;
+    top: -20px;
+    right: -5px;
+    background-color: transparent;
+    border: none;
+    width: 30px;
+    background-color: red;
+    cursor: pointer;
+}
+.product-name, .product-quantity{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+.submit{
+    margin-top: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+}
+.stocks-container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+.stocks-wrapper{
+    width: 200px;
+    background-color: rgb(255, 107, 131);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    gap: 10px;
+    position: relative;
+    padding: 20px;
+}
+.stock-name{
+    text-align: center;
+    font-size: 1rem;
+    width: 100%;
+    overflow-wrap: anywhere;
+}
+.remove-wrapper{
+    padding: 10px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(214, 208, 208);
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.txt-remove{
+    color: black;
+    font-size: 16px;
+}
+.btn-container{
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+}
+.yes{
+    background-color: #ff0000 ;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+}
+.no{
+    background-color:#6C757D ;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+.edit-container{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(170, 170, 170);
+    border-radius: 20px;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px;
+}
+.update-submit{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;   
+    align-self: center;
+}
+.checkbox{
+    position: absolute;
+    top: 0;
+    right: -5px;
+    transform: scale(1.5);
+}

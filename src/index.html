@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Optional CSS -->
+</head>
+<body>
+    <header>
+        <h1 class="logo">Inventory Management System</h1>
+        <hr>
+    </header>
+
+    <main>
+        <div class="operation">
+            <h1 class="txt-items">Items</h1>
+            <div class="btn-container">
+                
+                <button id="add" class="add">Add</button>
+                <button id="remove" class="remove">Remove</button>
+                <button id="edit" class="edit">Edit</button>
+            </div>
+        </div>
+        
+        <form id="myForm" class="form" style="display: none;">
+            <img src="images/close.png" alt="" class="close" id="close">
+            <input type="text" id="productName" placeholder="Enter a product name" class="product-name" required>
+            <input type="text" id="productQuantity" placeholder="Enter the quantity" class="product-quantity" required>
+            <button id="submit" class="submit">Add</button>
+        </form>
+        <div id="stocksContainer" class="stocks-container">
+        </div>
+        <form id="removeContainer" class="remove-wrapper" style="display: none;">
+            <p class="txt-remove" id="txtRemove"></p>
+            <div class="btn-container">
+                <button id="yes" class="yes">Yes</button>
+                <button id="no" class="no">No</button>
+            </div>
+        </form>
+        <form id="editContainer" class="edit-container" style="display: none;">
+            <img src="images/close.png" alt="" class="close" id="editClose">
+            <p class="txt-edit">Edit</p>
+            <input type="text" id="editProductName" placeholder="Enter a product name" class="product-name" required>
+            <input type="text" id="editProductQuantity" placeholder="Enter the quantity" class="product-quantity" required>
+            <button id="updateSubmit" class="update-submit">Update</button>
+        </form>
+    
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 My Website. All rights reserved.</p>
+    </footer>
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
