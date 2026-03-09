@@ -1,0 +1,9 @@
+# Inventory Management System
+# Pure HTML, CSS, and JavaScript project
+# Purpose: Allows users to add, update, delete, and track products in inventory
+# Features:
+#   - Product management (add, edit, delete)
+#   - Transaction History
+#   - Simple user-friendly interface
+# Development:
+#   - Run locally using VS Code Live Server extension
