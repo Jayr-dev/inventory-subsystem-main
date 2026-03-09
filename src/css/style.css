@@ -266,7 +266,7 @@ form{
 }
 .transactionName-quantity{
     display: flex;
-    gap: 10px;
+    gap: 20px;
     align-items: flex-end;
 }
 .transaction-quantity{
