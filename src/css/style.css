@@ -9,6 +9,7 @@ body{
     display: grid;
     grid-template-rows: auto 1fr auto;
     gap: 10px;
+    background-color: rgb(83, 105, 110);
 }
 main{
     height: 100%;
@@ -21,10 +22,11 @@ button{
 }
 .logo{
     margin-left: 50px;
+    color: white;
 }
 .operation{
     display: grid;
-    grid-template-columns: max-content 1fr;
+    grid-template-columns: max-content 1fr max-content;
     gap: 10px;
     margin: 0 50px;
 }
@@ -37,7 +39,7 @@ button{
    
 }
 .txt-items{
-    color: black;
+    color: white;
     text-align: center;
 }
 .add{
@@ -55,16 +57,23 @@ button{
     background-color: #ff4d4d;
 }
 .edit{
-    background-color: rgb(255, 80, 156) ;
+    background-color: rgba(0, 0, 0, 0.362);
     color: white;
 }
 .edit:hover{
-    background-color: rgb(255, 113, 175);
+    background-color: rgba(0, 0, 0, 0.299);
 }
-.add, .remove, .edit{
+.add, .remove, .edit {
     padding: 10px 20px;
     border: none;
     border-radius: 10px;
+}
+.btn-transactions{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.362);
+    color: white;
 }
 
 form{
@@ -83,8 +92,9 @@ form{
     align-items: center;
     gap: 10px;
     padding: 20px 10px 10px 10px;
-    background-color: rgb(124, 10, 189);
+    background-color: rgba(0, 0, 0, 0.647);
     border-radius: 20px;
+    border: 2px solid white;
 }
 .close{
     position: absolute;
@@ -108,6 +118,8 @@ form{
     padding: 10px 20px;
     border-radius: 10px;
     border: none;
+    background-color:#007BFF;
+    color: white;
 }
 .stocks-container{
     display: flex;
@@ -117,7 +129,7 @@ form{
 }
 .stocks-wrapper{
     width: 200px;
-    background-color: rgb(255, 107, 131);
+    background-color: rgba(0, 0, 0, 0.585);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -132,6 +144,9 @@ form{
     text-align: center;
     font-size: 1rem;
     width: 100%;
+    overflow-wrap: anywhere;
+}
+.stock-quantity{
     overflow-wrap: anywhere;
 }
 .remove-wrapper{
@@ -199,4 +214,65 @@ form{
     top: 0;
     right: -5px;
     transform: scale(1.5);
+}
+.transactions-content{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color:#143d69;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 500px;
+    gap: 20px;
+}
+.txt-transaction{
+    color: white;
+}
+.transaction-history{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-x: auto;
+    width: 100%;
+    height: 100%;
+}
+.transactions-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.362);
+    border-radius: 20px;
+    gap: 10px;
+}
+.transaction-type{
+    color: white;
+}
+.transactions-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    
+}
+.transaction-name{
+    font-size: 24px;
+    font-weight: bold;
+}
+.transaction-name, .transaction-date-time{
+    color: white;
+}
+.transactionName-quantity{
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+.transaction-quantity{
+    color: white;
+}
+.footer{
+    color: white;
+    text-align: center;
 }

@@ -20,10 +20,10 @@ export function renderStocks() {
     });
 }
 
-export function addStock(name, quantity) {
+export function addStock(name, quantity, date, type) {
   
     const stocks = getStocks();
-    stocks.push({ name, quantity });
+    stocks.push({ name, quantity, date, type });
     saveStocks(stocks);
 }
 
@@ -37,10 +37,10 @@ export function removeStocks(indexes) {
     saveStocks(updated);
 }
 
-export function updateStock(index, newName, newQuantity) {
+export function updateStock(index, newName, newQuantity, newDate, newType) {
     if (!newName || !newQuantity) return;
 
     const stocks = getStocks();
-    stocks[index] = { name: newName, quantity: newQuantity };
+    stocks[index] = { name: newName, quantity: newQuantity, date: newDate, type: newType };
     saveStocks(stocks);
 }

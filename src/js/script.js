@@ -2,11 +2,13 @@ import {
     renderStocks,
     addStock,
     removeStocks,
-    updateStock
+    updateStock,
 } from "./stocks.js";
+import { renderTransactions } from "./transactions.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     renderStocks();
+    renderTransactions();
 });
 
 document.getElementById("add").addEventListener("click", () => {
@@ -22,8 +24,11 @@ document.getElementById("submit").addEventListener("click", () => {
         return;
     }
 
-    addStock(name, quantity);
+    const date = new Date().toLocaleString();
+    const type = "Added";
+    addStock(name, quantity, date, type);
     renderStocks();
+    renderTransactions();
 });
 
 document.getElementById("close").addEventListener("click", () => {
@@ -93,9 +98,20 @@ document.getElementById("editClose").addEventListener("click", () => {
 document.getElementById("updateSubmit").addEventListener("click", () => {
     const newName = document.getElementById("editProductName").value;
     const newQuantity = document.getElementById("editProductQuantity").value;
-
-    updateStock(selectedIndex, newName, newQuantity);
+    const newDate = new Date().toLocaleString();
+    const newType = "Updated";
+    updateStock(selectedIndex, newName, newQuantity, newDate, newType);
     renderStocks();
+    renderTransactions();
 
     document.getElementById("editContainer").style.display = "none";
+});
+
+document.getElementById("closeTransactions").addEventListener("click", ()=>{
+    document.getElementById("transactionsContent").style.display = "none";
+
+});
+
+document.getElementById("btnTransactions").addEventListener("click", ()=>{
+    document.getElementById("transactionsContent").style.display = "flex";
 });

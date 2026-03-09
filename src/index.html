@@ -20,12 +20,13 @@
                 <button id="remove" class="remove">Remove</button>
                 <button id="edit" class="edit">Edit</button>
             </div>
+            <button class="btn-transactions" id="btnTransactions">View Transactions</button>
         </div>
         
         <form id="myForm" class="form" style="display: none;">
             <img src="images/close.png" alt="" class="close" id="close">
-            <input type="text" id="productName" placeholder="Enter a product name" class="product-name" required>
-            <input type="text" id="productQuantity" placeholder="Enter the quantity" class="product-quantity" required>
+            <input type="text" id="productName" placeholder="Enter a product name" class="product-name" required maxlength="20">
+            <input type="text" id="productQuantity" placeholder="Enter the quantity" class="product-quantity" required maxlength="10">
             <button id="submit" class="submit">Add</button>
         </form>
         <div id="stocksContainer" class="stocks-container">
@@ -40,16 +41,22 @@
         <form id="editContainer" class="edit-container" style="display: none;">
             <img src="images/close.png" alt="" class="close" id="editClose">
             <p class="txt-edit">Edit</p>
-            <input type="text" id="editProductName" placeholder="Enter a product name" class="product-name" required>
-            <input type="text" id="editProductQuantity" placeholder="Enter the quantity" class="product-quantity" required>
+            <input type="text" id="editProductName" placeholder="Enter a product name" class="product-name" required  maxlength="20">
+            <input type="text" id="editProductQuantity" placeholder="Enter the quantity" class="product-quantity" required  maxlength="10">
             <button id="updateSubmit" class="update-submit">Update</button>
         </form>
+        <div class="transactions-content" id="transactionsContent" style="display: none;">
+                <h1 class="txt-transaction">Transactions</h1>
+                <div class="transaction-history" id="transactionHistory">
+                </div>
+            <img src="images/close.png" alt="" class="close" id="closeTransactions">
+        </div>
     
     </main>
 
     <footer>
         <hr>
-        <p>&copy; 2026 My Website. All rights reserved.</p>
+        <p class="footer">&copy; 2026 My Website. All rights reserved.</p>
     </footer>
     <script type="module" src="js/script.js"></script>
 </body>
